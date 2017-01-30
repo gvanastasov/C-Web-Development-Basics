@@ -5,9 +5,9 @@ Contains homeworks and other stuff, for the course title. Aims at learning web d
 
 **Task list:**
 
-- [ ] Course Introduction
-- [ ] Web Fundamentals Introduction
-- [ ] HTTP Protocol + Exercise 1
+- [X] Course Introduction
+- [X] Web Fundamentals Introduction
+- [X] HTTP Protocol + Exercise 1
 - [ ] HTTP Protocol + Exercise 2
 - [ ] State Management
 - [ ] Workshop: Web + Entity Framework
