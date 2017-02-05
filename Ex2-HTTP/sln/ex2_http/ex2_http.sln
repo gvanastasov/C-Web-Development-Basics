@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrowseCakes", "BrowseCakes\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{2D8B7541-5F23-4CC7-9D54-94A8D8AE21B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{D306B2BD-5EF4-480E-B603-D2E05E21B06D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2D8B7541-5F23-4CC7-9D54-94A8D8AE21B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D8B7541-5F23-4CC7-9D54-94A8D8AE21B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D8B7541-5F23-4CC7-9D54-94A8D8AE21B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D306B2BD-5EF4-480E-B603-D2E05E21B06D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D306B2BD-5EF4-480E-B603-D2E05E21B06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D306B2BD-5EF4-480E-B603-D2E05E21B06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D306B2BD-5EF4-480E-B603-D2E05E21B06D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
