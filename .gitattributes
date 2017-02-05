@@ -2,6 +2,7 @@
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 * text=auto
+Ex1-Web_Fundamentals/Project-Softuni-Blog/styles/* linguist-vendored
 
 ###############################################################################
 # Set default behavior for command prompt diff.
