@@ -8,7 +8,7 @@ Contains homeworks and other stuff, for the course title. Aims at learning web d
 - [X] Course Introduction
 - [X] Web Fundamentals Introduction
 - [X] HTML/CSS + Exercise 1
-- [ ] HTTP Protocol + Exercise 2
+- [X] HTTP Protocol + Exercise 2
 - [ ] State Management
 - [ ] Workshop: Web + Entity Framework
 - [ ] State Management + Exercise 3
