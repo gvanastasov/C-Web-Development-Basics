@@ -1,24 +1,95 @@
 <!doctype html>
 <html lang="en">
-	<head>
-        <meta charset="utf-8">
-        <title>Fresh Fruits &amp; Salads</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-    </head>
-    <body>
-        <h1>Favorites</h1>
-        <ul>
-            <li><a href="#">Banana</a></li>
-			<li><a href="#">Watermelon</a></li>
-			<li><a href="#">Apple</a></li>
-		</ul>
-        <h1>Fresh Fruits &amp; Salads</h1>
-        <p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget mattis neque. Pellentesque sodales lobortis mauris, id aliquam tortor varius vel.
-        </p>
-        <p>
-			In elementum, neque at semper venenatis, eros velit venenatis nulla, sed bibendum ipsum lectus pharetra tellus. Aenean finibus ipsum non dui accumsan, id lobortis dolor tincidunt. In sed imperdiet lectus, at dignissim tortor. Etiam rutrum nibh a neque porttitor vulputate. Donec ut nisi eu leo tempus lacinia in malesuada lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam a euismod arcu. Phasellus luctus sollicitudin neque, et bibendum risus consequat id. Aliquam erat volutpat. Curabitur.
-		</p>
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Fresh Fruits &amp; Salads</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 navbar navbar-default">
+                <div class="container-fluid">
+                    <h1 class="h3">Favorites</h1>
+
+                    <div class="navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                        <ul class="nav navbar-nav">
+                            <li class="active btn btn-primary"><a href="#">Banana</a></li>
+                            <li><a href="#">Watermelon</a></li>
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Salads</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Search Fruit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-9">
+                <button id="warning" class="btn text-danger lightButton collapse in" data-toggle="collapse" data-target="#warning">
+                    <div class="col-md-10">
+                        Uh oh! Have you eaten a fruit today?
+                    </div>
+                    <div class="col-md-2">&times;</div>
+                </button>
+                <h1>Fresh Fruits &amp; Salads</h1>
+                    <blockquote>
+                        <p>
+                            The best fruits and salads can be found here.
+                        </p>
+                        <footer>
+                            G. Ramsey
+                        </footer>
+                    </blockquote>
+                <h2>Nutrition Info</h2>
+                <div>
+                    <table class="table table-condensed table-bordered">
+                        <tr>
+                            <th>Fruit</th>
+                            <th>Vitamins</th>
+                        </tr>
+                        <tr>
+                            <td>Banana</td>
+                            <td>A, C, B6</td>
+                        </tr>
+                        <tr>
+                            <td>Watermelon</td>
+                            <td>A, C</td>
+                        </tr>
+                        <tr>
+                            <td>Apple</td>
+                            <td>A, C</td>
+                        </tr>
+                    </table>
+
+                    <p>
+                        In elementum, neque at semper venenatis, eros velit venenatis nulla, sed bibendum ipsum lectus pharetra tellus. Aenean finibus
+                        ipsum non dui accumsan, id lobortis dolor tincidunt. In sed imperdiet lectus, at dignissim tortor. Etiam
+                        rutrum nibh a neque porttitor vulputate. Donec ut nisi eu leo tempus lacinia in malesuada lorem. Pellentesque
+                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam a euismod arcu.
+                        Phasellus luctus sollicitudin neque, et bibendum risus consequat id. Aliquam erat volutpat. Curabitur.
+                    </p>
+                    <div class="row">
+                        <img src="images/apple.jpg" class="col-md-3 table-bordered">
+                        <img src="images/bananas.jpg" class="col-md-3 table-bordered">
+                        <img src="images/watermelon.jpg" class="col-md-3 table-bordered">
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

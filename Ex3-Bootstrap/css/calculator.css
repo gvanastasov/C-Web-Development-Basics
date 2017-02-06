@@ -1,0 +1,21 @@
+.calculatorBkcg{
+    padding: 20px;
+    background-color: lightgoldenrodyellow;
+}
+
+.calculatorRow{
+    margin: 20px 0px;
+}
+
+.calculatorBtnContainer{
+    padding: 0px 20px;
+}
+
+.calculatorBtn{
+    width: 100%;
+}
+
+.calculatorBtnDark{
+    background-color: darkblue;
+    color: white;
+}

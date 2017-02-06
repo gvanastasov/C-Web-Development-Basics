@@ -1,0 +1,10 @@
+.lightButton{
+    background-color: lightcoral;
+    border: 3px solid orangered;
+    color: white !important;
+    width: 100%;
+}
+
+.normalButton{
+    color: white;
+}
