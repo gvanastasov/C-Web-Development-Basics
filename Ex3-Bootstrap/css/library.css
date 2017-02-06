@@ -1,0 +1,27 @@
+#vertical-pill > li{
+    border-bottom: 1px solid lightgray;
+    border-radius: 0px;
+}
+
+#vertical-pill > :first-child > a{
+    border-radius: 3px 3px 0px 0px;
+}
+
+#vertical-pill > :last-child > a{
+    border-radius: 0px 0px 3px 3px;
+}
+
+.pagination > li > a.btn{
+    border: none;
+    border-radius: 0px;
+}
+
+.pagination :first-child > a.btn{
+    margin-right: 1px;
+    border-left: 1px solid lightgray;
+}
+
+.pagination :last-child > a.btn{
+    margin-left: 1px;
+    border-right: 1px solid lightgray;
+}

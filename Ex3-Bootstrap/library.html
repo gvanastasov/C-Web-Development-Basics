@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Library</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/library.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Library</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">C# Books</a></li>
+                <li><a href="#">Java Books</a></li>
+                <li>
+                    <form class="navbar-form navbar-left">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    Go!
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Hello, <span>Login</span></a></li>
+                <li>
+                    <a href="#"><img src="images/shopping-cart.png" alt="cart"></a>
+                </li>
+                <li>
+                    <a href="#">UK</a>
+                </li>
+                <li>
+                    <a href="#">BUL</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="vertical-pill" class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Subscribtion Process</a></li>
+                    <li><a href="#">General Information</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div><img class="img-thumbnail" src="images/book.png" alt="book"></div>
+                        <h3>Programming<br>Fundamentals C#</h3>
+                        <h5><strong>45</strong> copies available</h1>
+                            <div><img src="images/rating.png" alt="rating"></div>
+                            <div class="text-primary h5">Details</div>
+                            <form action="#" class="form-horizontal">
+                                <button class="btn btn-primary">Borrow</button>
+                                <button class="btn btn-default">Add to Cart</button>
+                            </form>
+                            <div class="text-muted small">Last time borrowed 3 mins ago</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div><img class="img-thumbnail" src="images/book.png" alt="book"></div>
+                        <h3>Programming<br>Fundamentals Java</h3>
+                        <h5><strong>3</strong> copies available</h1>
+                            <div><img src="images/rating.png" alt="rating"></div>
+                            <div class="text-primary h5">Details</div>
+                            <form action="#" class="form-horizontal">
+                                <button class="btn btn-primary">Borrow</button>
+                                <button class="btn btn-default">Add to Cart</button>
+                            </form>
+                            <div class="text-muted small">Last time borrowed 5 mins ago</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div><img class="img-thumbnail" src="images/book.png" alt="book"></div>
+                        <h3>Основи<br>на програмирането C#</h3>
+                        <h5><strong>45</strong> copies available</h1>
+                            <div><img src="images/rating.png" alt="rating"></div>
+                            <div class="text-primary h5">Details</div>
+                            <form action="#" class="form-horizontal">
+                                <button class="btn btn-primary">Borrow</button>
+                                <button class="btn btn-default">Add to Cart</button>
+                            </form>
+                            <div class="text-muted small">Last time borrowed 1 day ago</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center">
+                        
+                        <ul class="pagination">
+                            <li><a class="btn btn-default">Previous</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a class="btn btn-default">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        All Rights Reserved &copy; 2017
+    </footer>
+</body>
+
+</html>
