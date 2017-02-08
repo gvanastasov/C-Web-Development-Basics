@@ -1,0 +1,20 @@
+#products-table tr > td:nth-child(2) > span{
+    font-weight: bold;
+}
+
+#products-table tr > td:last-child{
+    color: #008fff;
+    cursor: pointer;
+}
+
+.delivered {
+    background-color: #b6ff97;
+}
+
+.not-confirmed {
+    background-color: #fdffd0;
+}
+
+.declined{
+    background-color: #ffd8d0
+}

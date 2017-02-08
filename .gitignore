@@ -243,3 +243,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# User Defined
+0_Lectures/
+bootstrap-3.3.7-dist/
