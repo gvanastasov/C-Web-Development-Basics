@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Edit Products</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/products.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="products.html">Back to Orders</a>
+        <h3>Edit Order</h3>
+        <form action="" method="GET" class="form-horizontal col-md-6 col-xs-offset-1">
+            <div class="form-group">
+                <label for="Id" class="control-label col-sm-3">Id</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" id="Id" disabled value="1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Name" class="control-label col-sm-3">Name</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Name" disabled value="Harry Potter">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Type" class="control-label col-sm-3">Type</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Type" disabled value="PC">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pDate" class="control-label col-sm-3">Payment Date</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="pDate" disabled value="29/01/2017">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dDate" class="control-label col-sm-3">Delivery Date</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="dDate" disabled value="29/01/2017">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="status" class="control-label col-sm-3">Status</label>
+                <div class="col-sm-9">
+                    <select class="form-control" id="status">
+                            <option>Pending</option>
+                            <option>Delivered</option>
+                            <option>Declined</option>
+                            <option>In Call to Confirm</option>
+                        </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary pull-right">Update</button>
+        </form>
+    </div>
+</body>
+
+</html>
