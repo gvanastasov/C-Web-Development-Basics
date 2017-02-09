@@ -57,7 +57,7 @@ namespace _RegisterUser
                 return (PasswordHash.Length < 4 || !reg.IsMatch(PasswordHash));
             }
         }
-        public bool mismatchedPassowrd
+        public bool mismatchedPassword
         {
             get
             {
@@ -77,7 +77,7 @@ namespace _RegisterUser
         {
             get
             {
-                return invalidName || invalidEmail || mismatchEmail || invalidPassword || mismatchedPassowrd || formNotCompleted;
+                return invalidName || invalidEmail || mismatchEmail || invalidPassword || mismatchedPassword || formNotCompleted;
             }
         }
 
