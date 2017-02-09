@@ -8,13 +8,12 @@ form > div:first-child{
     font-weight: bold;
 }
 
-.astrix{
+.asterisk{
     color:red;
-    margin: 0px 20px;
-    height: 100%;
-    font-weight: bold;
-    vertical-align: middle;
-    text-align: center;
+}
+
+form > div:first-child .asterisk{
+    margin-right: 15px;
 }
 
 form > div{
