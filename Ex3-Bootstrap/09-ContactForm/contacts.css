@@ -1,0 +1,22 @@
+.headline{
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+    padding-bottom: 5px
+}
+
+form > div:first-child{
+    font-weight: bold;
+}
+
+.astrix{
+    color:red;
+    margin: 0px 20px;
+    height: 100%;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+}
+
+form > div{
+    margin-bottom: 15px;
+}
