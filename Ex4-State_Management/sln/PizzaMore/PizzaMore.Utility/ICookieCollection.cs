@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzaMore.Utility
 {
-    interface ICookieCollection
+    public interface ICookieCollection
     {
         void AddCookie(Cookie cookie);
 
