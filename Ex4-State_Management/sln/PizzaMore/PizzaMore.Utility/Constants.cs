@@ -6,5 +6,6 @@
         public static readonly string QueryString = "QUERY_STRING";
         public static readonly string CookieGet = "HTTP_COOKIE";
         public static readonly string SessionIdKey = "sid";
+        public static readonly string HomepageRelativePath = "../../htdocs/PizzaMore/game/index.html";
     }
 }

@@ -123,7 +123,7 @@ namespace PizzaMore.Utility
 
         public static void PageNotAllowed()
         {
-            PrintFileContent("../../htdocs/pm/game/index.html");
+            PrintFileContent(Constants.HomepageRelativePath);
         }
 
         public static void PrintFileContent(string path)
