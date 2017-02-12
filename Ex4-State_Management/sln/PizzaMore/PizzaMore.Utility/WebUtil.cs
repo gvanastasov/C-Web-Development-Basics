@@ -5,6 +5,9 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using PizzaMore.Data.Models;
+using PizzaMore.Data;
+using System.IO;
 
 namespace PizzaMore.Utility
 {
@@ -99,6 +102,34 @@ namespace PizzaMore.Utility
             
 
             return cookiesCollection;
+        }
+
+        public static Session GetSession()
+        {
+            ICookieCollection cookiesCollection = GetCookies();
+
+            if(cookiesCollection.ContainsKey(Constants.SessionIdKey) == false)
+            {
+                return null;
+            }
+
+            var sessionCookie = cookiesCollection[Constants.SessionIdKey];
+            var ctx = new PizzaMoreContext();
+
+            var session = ctx.Sessions
+                .FirstOrDefault(s => s.Id == sessionCookie.Value);
+            return session;
+        }
+
+        public static void PageNotAllowed()
+        {
+            PrintFileContent("../../htdocs/pm/game/index.html");
+        }
+
+        public static void PrintFileContent(string path)
+        {
+            string content = File.ReadAllText(path);
+            Console.WriteLine(content);
         }
     }
 }
