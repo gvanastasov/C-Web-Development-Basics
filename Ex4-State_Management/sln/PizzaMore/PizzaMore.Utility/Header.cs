@@ -52,5 +52,10 @@ namespace PizzaMore.Utility
 
             return header.ToString();
         }
+
+        public void Print()
+        {
+            Console.WriteLine(this.ToString());
+        }
     }
 }
