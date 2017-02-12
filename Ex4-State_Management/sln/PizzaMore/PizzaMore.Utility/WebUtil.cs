@@ -72,6 +72,33 @@ namespace PizzaMore.Utility
             return resultParameters;
         }
 
+        public static ICookieCollection GetCookies()
+        {
+            CookieCollection cookiesCollection = new CookieCollection();
 
+            var cookiesString = Environment.GetEnvironmentVariable(Constants.CookieGet);
+
+            if (string.IsNullOrEmpty(cookiesString))
+            {
+                return new CookieCollection();
+            }
+
+            var cookies = cookiesString.Split(';');
+            foreach (var cookie in cookies)
+            {
+                var pair = cookie.Split('=').Select(x => x.Trim()).ToArray(); ;
+                var name = pair[0];
+                string value = string.Empty;
+                if(string.IsNullOrEmpty(name) == false)
+                {
+                    value = pair[1];
+                }
+
+                cookiesCollection.AddCookie(new Cookie(name, value));
+            }
+            
+
+            return cookiesCollection;
+        }
     }
 }
