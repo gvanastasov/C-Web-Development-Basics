@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -64,6 +65,16 @@ namespace PizzaMore.Utility
             {
                 this.Cookies.Remove(cookieName);
             }
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+
+        IEnumerator<Cookie> IEnumerable<Cookie>.GetEnumerator()
+        {
+            return this.Cookies.Values.GetEnumerator();
         }
     }
 }
