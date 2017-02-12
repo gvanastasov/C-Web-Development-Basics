@@ -1,0 +1,16 @@
+body{
+    background-image: url('../images/pizza_1.jpg');
+}
+
+.jumbotron{
+    position: relative;
+    min-height: 200px;
+}
+
+form button.btn-danger{
+    margin-right: 5px;
+}
+
+form button.btn-success{
+    margin-left: 5px;
+}
