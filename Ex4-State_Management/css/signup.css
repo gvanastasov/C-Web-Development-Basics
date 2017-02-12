@@ -4,7 +4,6 @@ body{
 
 .jumbotron{
     position: relative;
-    min-height: 200px;
 }
 
 form button.btn-danger{
