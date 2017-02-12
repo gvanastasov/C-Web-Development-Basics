@@ -129,6 +129,7 @@ namespace PizzaMore.Utility
         public static void PrintFileContent(string path)
         {
             string content = File.ReadAllText(path);
+            Console.WriteLine(path);
             Console.WriteLine(content);
         }
     }

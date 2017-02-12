@@ -17,21 +17,23 @@ namespace Home
 
         static void Main()
         {
-            AddDefaultLanguageCookie();
+            //AddDefaultLanguageCookie();
 
-            if (WebUtil.IsGet())
-            {
-                RequestParameters = WebUtil.RetrieveGetParameters();
-                Language = WebUtil.GetCookies()["lang"].Value;
-            }
-            else if (WebUtil.IsPost())
-            {
-                RequestParameters = WebUtil.RetrievePostParameters();
-                Header.AddCookie(new Cookie("lang", RequestParameters["language"]));
-                Language = RequestParameters["language"];
-            }
+            //if (WebUtil.IsGet())
+            //{
+            //    RequestParameters = WebUtil.RetrieveGetParameters();
+            //    Language = WebUtil.GetCookies()["lang"].Value;
+            //}
+            //else if (WebUtil.IsPost())
+            //{
+            //    RequestParameters = WebUtil.RetrievePostParameters();
+            //    Header.AddCookie(new Cookie("lang", RequestParameters["language"]));
+            //    Language = RequestParameters["language"];
+            //}
+            //Header.Print();
+            ServeHtmlEn();
 
-            ShowPage();
+            //ShowPage();
         }
 
         private static void ShowPage()
