@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pizza More</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/home.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand btn" href="#">PizzaMore</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active btn"><a href="#">Home</a></li>
+                <li class="btn"><a href="#">Call us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" class="btn btn-info">Menu</a></li>
+                <li><a href="#" class="btn btn-warning">Sign Up</a></li>
+                <li><a href="#" class="btn btn-success">Sign In</a></li>
+                <li>
+                    <form method="post">
+                        <input type="button" name="language" value="EN" formaction="home.exe" onclick="change(this)" class="btn btn-primary">
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="./images/pizza_1.jpg" alt="pizza_1">
+            </div>
+            <div class="item">
+                <img src="./images/pizza_2.jpg" alt="pizza_2">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function change(element){
+            element.value = element.value == "EN" ? "BG" : "EN";
+        }
+    </script>
+</body>
+
+</html>
