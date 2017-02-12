@@ -77,31 +77,21 @@ namespace PizzaMore.Utility
 
         public static ICookieCollection GetCookies()
         {
-            CookieCollection cookiesCollection = new CookieCollection();
-
-            var cookiesString = Environment.GetEnvironmentVariable(Constants.CookieGet);
-
-            if (string.IsNullOrEmpty(cookiesString))
+            string cookieString = Environment.GetEnvironmentVariable(Constants.CookieGet);
+            if (string.IsNullOrEmpty(cookieString))
             {
                 return new CookieCollection();
             }
 
-            var cookies = cookiesString.Split(';');
-            foreach (var cookie in cookies)
+            var cookies = new CookieCollection();
+            string[] cookieSaves = cookieString.Split(';');
+            foreach (var cookieSave in cookieSaves)
             {
-                var pair = cookie.Split('=').Select(x => x.Trim()).ToArray(); ;
-                var name = pair[0];
-                string value = string.Empty;
-                if(string.IsNullOrEmpty(name) == false)
-                {
-                    value = pair[1];
-                }
-
-                cookiesCollection.AddCookie(new Cookie(name, value));
+                string[] cookiePair = cookieSave.Split('=').Select(x => x.Trim()).ToArray();
+                var cookie = new Cookie(cookiePair[0], cookiePair[1]);
+                cookies.AddCookie(cookie);
             }
-            
-
-            return cookiesCollection;
+            return cookies;
         }
 
         public static Session GetSession()
@@ -128,8 +118,7 @@ namespace PizzaMore.Utility
 
         public static void PrintFileContent(string path)
         {
-            string content = File.ReadAllText(path);
-            Console.WriteLine(path);
+            string content = File.ReadAllText(path, Encoding.UTF8);
             Console.WriteLine(content);
         }
     }

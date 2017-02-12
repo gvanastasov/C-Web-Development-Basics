@@ -9,8 +9,6 @@ namespace PizzaMore.Utility
 {
     class CookieCollection : ICookieCollection
     {
-        public IDictionary<string, Cookie> Cookies { get; private set; }
-
         public CookieCollection()
         {
             this.Cookies = new Dictionary<string, Cookie>();
@@ -20,7 +18,7 @@ namespace PizzaMore.Utility
         {
             get
             {
-                return Cookies[key];
+                return this.Cookies[key];
             }
 
             set
@@ -36,11 +34,13 @@ namespace PizzaMore.Utility
             }
         }
 
+        public IDictionary<string, Cookie> Cookies { get; private set; }
+
         public int Count
         {
             get
             {
-                return Cookies.Count;
+                return this.Cookies.Count;
             }
         }
 
@@ -56,7 +56,12 @@ namespace PizzaMore.Utility
 
         public bool ContainsKey(string key)
         {
-            return Cookies.ContainsKey(key);
+            return this.Cookies.ContainsKey(key);
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return this.GetEnumerator();
         }
 
         public void RemoveCookie(string cookieName)
@@ -65,11 +70,6 @@ namespace PizzaMore.Utility
             {
                 this.Cookies.Remove(cookieName);
             }
-        }
-
-        public IEnumerator GetEnumerator()
-        {
-            return this.GetEnumerator();
         }
 
         IEnumerator<Cookie> IEnumerable<Cookie>.GetEnumerator()

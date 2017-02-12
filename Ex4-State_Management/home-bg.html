@@ -3,7 +3,7 @@
 
 <head>
     <title>Pizza More-BG</title>
-    <meta charset="UTF-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/PizzaMore/css/bootstrap.min.css" rel="stylesheet">
     <link href="/PizzaMore/css/home.css" rel="stylesheet">
@@ -24,8 +24,8 @@
                 <li><a href="#" class="btn btn-warning">Записване</a></li>
                 <li><a href="#" class="btn btn-success">Вписване</a></li>
                 <li>
-                    <form method="post">
-                        <input type="button" name="language" value="БГ" formaction="home.exe" onclick="change(this)" class="btn btn-primary">
+                    <form id="lang-form" method="post" action="Home.exe">
+                        <input type="submit" name="language" value="BG" onclick="change(this)" class="btn btn-primary">
                     </form>
                 </li>
             </ul>

@@ -16,10 +16,10 @@ namespace PizzaMore.Utility
 
         }
 
-        public Cookie(string name, string value)
+        public Cookie(string cookieName, string parameterValue)
         {
-            this.Name = name;
-            this.Value = value;
+            this.Name = cookieName;
+            this.Value = parameterValue;
         }
 
         public override string ToString()
