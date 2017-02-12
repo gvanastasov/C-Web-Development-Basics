@@ -246,5 +246,7 @@ ModelManifest.xml
 
 # User Defined
 0_Lectures/
-bootstrap-3.3.7-dist/
+Ex4-State_Management/css/bootstrap.min.css
+Ex4-State_Management/js/bootstrap.min.js
+Ex4-State_Management/js/jquery-3.1.1.min.js
 /gulpfile.js
