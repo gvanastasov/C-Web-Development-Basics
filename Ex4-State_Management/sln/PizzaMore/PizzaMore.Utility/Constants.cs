@@ -9,5 +9,6 @@
         public static readonly string HomepageRelativePath = "../htdocs/PizzaMore/game/index.html";
         public static readonly string HomeEN = "../htdocs/PizzaMore/home.html";
         public static readonly string HomeBG = "../htdocs/PizzaMore/home-bg.html";
+        public static readonly string SignUp = "../htdocs/PizzaMore/signup.html";
     }
 }

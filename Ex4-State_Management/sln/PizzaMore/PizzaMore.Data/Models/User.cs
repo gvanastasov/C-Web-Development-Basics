@@ -11,6 +11,10 @@ namespace PizzaMore.Data.Models
         public int Id { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public ICollection<Pizza> Suggestions { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id}. {Email} - pass: {Password}"; 
+        }
     }
 }

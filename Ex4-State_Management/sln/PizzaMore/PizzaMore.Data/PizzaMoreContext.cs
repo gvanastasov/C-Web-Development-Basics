@@ -15,5 +15,6 @@
         public virtual DbSet<Session> Sessions { get; set; }
 
         public virtual DbSet<Pizza> PizzaSuggestions { get; set; }
+
     }
 }

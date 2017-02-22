@@ -52,11 +52,6 @@
     <Compile Include="Models\Pizza.cs" />
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="PizzaMoreContext.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PizzaMoreContext.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="PizzaMoreContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -65,10 +60,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PizzaMoreContext.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PizzaMoreContext.Context.cs</LastGenOutput>
-    </Content>
     <Content Include="PizzaMoreContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PizzaMoreContext.cs</LastGenOutput>
