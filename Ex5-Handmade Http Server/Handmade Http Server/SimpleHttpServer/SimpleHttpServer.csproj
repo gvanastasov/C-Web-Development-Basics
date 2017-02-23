@@ -46,6 +46,8 @@
     <Compile Include="Models\Cookie.cs" />
     <Compile Include="Models\CookieCollection.cs" />
     <Compile Include="Models\Header.cs" />
+    <Compile Include="Models\HttpRequest.cs" />
+    <Compile Include="Models\HttpResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
