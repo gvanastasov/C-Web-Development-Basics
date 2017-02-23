@@ -113,7 +113,7 @@ namespace PizzaMore.Utility
 
         public static void PageNotAllowed()
         {
-            PrintFileContent(Constants.HomepageRelativePath);
+            PrintFileContent(Constants.NotAllowedPage);
         }
 
         public static void PrintFileContent(string path)

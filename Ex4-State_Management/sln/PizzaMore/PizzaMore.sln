@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignUp", "SignUp\SignUp.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Signin", "Signin\Signin.csproj", "{5CE6249D-7F2C-40F7-845D-624ED1337873}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{6C5C3D15-64D1-454E-9B3E-20D477323ABE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5CE6249D-7F2C-40F7-845D-624ED1337873}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CE6249D-7F2C-40F7-845D-624ED1337873}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CE6249D-7F2C-40F7-845D-624ED1337873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5C3D15-64D1-454E-9B3E-20D477323ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5C3D15-64D1-454E-9B3E-20D477323ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5C3D15-64D1-454E-9B3E-20D477323ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5C3D15-64D1-454E-9B3E-20D477323ABE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

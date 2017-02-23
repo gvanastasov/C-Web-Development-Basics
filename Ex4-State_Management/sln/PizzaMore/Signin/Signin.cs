@@ -54,10 +54,6 @@ namespace _Signin
                     }
                 }
             }
-
-            Console.WriteLine("Location: /cgi-bin/Home.exe\r\n");
-            Console.WriteLine("Connection: close \r\n");
-            return;
         }
 
         private static void ServeHtmlSignIn()
