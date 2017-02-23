@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\HeaderType.cs" />
+    <Compile Include="Enums\RequestMethod.cs" />
+    <Compile Include="Enums\ResponseStatusCode.cs" />
     <Compile Include="Models\Cookie.cs" />
     <Compile Include="Models\CookieCollection.cs" />
     <Compile Include="Models\Header.cs" />
