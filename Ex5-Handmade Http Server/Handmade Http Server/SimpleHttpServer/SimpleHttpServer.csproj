@@ -40,15 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\HeaderType.cs" />
     <Compile Include="Models\Cookie.cs" />
     <Compile Include="Models\CookieCollection.cs" />
+    <Compile Include="Models\Header.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Enums\" />
     <Folder Include="Resources\" />
     <Folder Include="RouteHandlers\" />
   </ItemGroup>
