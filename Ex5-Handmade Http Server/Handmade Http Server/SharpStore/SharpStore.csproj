@@ -48,12 +48,37 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="content\bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="content\bootstrap\css\bootstrap-theme.min.css.map" />
+    <None Include="content\bootstrap\css\bootstrap.css.map" />
+    <None Include="content\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
       <Project>{9e139539-c272-488a-bfcf-caddf458df9d}</Project>
       <Name>SimpleHttpServer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\about.html" />
+    <Content Include="content\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="content\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="content\bootstrap\css\bootstrap.css" />
+    <Content Include="content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="content\bootstrap\js\bootstrap.js" />
+    <Content Include="content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="content\bootstrap\js\npm.js" />
+    <Content Include="content\css\carousel.css" />
+    <Content Include="content\home.html" />
+    <Content Include="content\jquery\jquery-3.1.1.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="content\images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpServer", "SimpleH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerTest", "ServerTest\ServerTest.csproj", "{817628FB-736B-4DEF-900E-576A2720650B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpStore", "..\..\..\Lectures\Last\SharpStore-Skeleton\SharpStore\SharpStore.csproj", "{2AE5492C-ECFE-4CB0-95BB-FEA0FAAABB17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpStore", "SharpStore\SharpStore.csproj", "{2AE5492C-ECFE-4CB0-95BB-FEA0FAAABB17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

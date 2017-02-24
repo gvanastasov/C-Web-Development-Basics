@@ -14,7 +14,7 @@ namespace SimpleHttpServer
         public static HttpResponse InternalServerError()
         {
             
-            string content = File.ReadAllText("Resources/Pages/500.html");
+            string content = File.ReadAllText("../../../SimpleHttpServer/Resources/Pages/500.html");
             var response = new HttpResponse()
             {
                 StatusCode = ResponseStatusCode.InternalServerError,
@@ -26,7 +26,8 @@ namespace SimpleHttpServer
 
         public static HttpResponse NotFound()
         {
-            string content = File.ReadAllText("Resources/Pages/404.html");
+            var path = Path.Combine("../../../SimpleHttpServer/Resources/Pages/404.html");
+            string content = File.ReadAllText(path);
 
             return new HttpResponse()
             {
