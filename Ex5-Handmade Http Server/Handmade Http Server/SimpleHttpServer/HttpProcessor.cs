@@ -43,6 +43,12 @@ namespace SimpleHttpServer
             string requestLine = StreamUtils.ReadLine(inputStream);
             string[] tokens = requestLine.Split(' ');
 
+            while (tokens.Length != 3)
+            {
+                requestLine = StreamUtils.ReadLine(inputStream);
+                tokens = requestLine.Split(' ');
+            }
+
             RequestMethod method = (RequestMethod)Enum.Parse(typeof(RequestMethod), tokens[0].ToUpper());
             string url = tokens[1];
             string protocolVersion = tokens[2];

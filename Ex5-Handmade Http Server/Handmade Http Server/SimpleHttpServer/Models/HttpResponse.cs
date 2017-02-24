@@ -12,10 +12,17 @@ namespace SimpleHttpServer.Models
         public ResponseStatusCode StatusCode { get; set; }
         public string StatusMessage
         {
-            get { return StatusCode.ToString(); }
+            get { return Enum.GetName(typeof(ResponseStatusCode), this.StatusCode); }
         }
         public Header Header { get; set; }
         public byte[] Content { get; set; }
+        public string ContentAsUTF8
+        {
+            set
+            {
+                this.Content = Encoding.UTF8.GetBytes(value);
+            }
+        }
 
         public HttpResponse()
         {
@@ -26,7 +33,7 @@ namespace SimpleHttpServer.Models
         {
             var response = new StringBuilder();
 
-            response.AppendLine($"HTTP/1.0 {StatusCode} {StatusMessage}");
+            response.AppendLine($"HTTP/1.0 {(int)StatusCode} {StatusMessage}");
             response.AppendLine($"{Header}");
 
             return response.ToString();

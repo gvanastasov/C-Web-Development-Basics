@@ -15,7 +15,7 @@ namespace SimpleHttpServer.Enums
         // 5xx - Server Error
 
         Continue = 100,
-        OK = 200,
+        Ok = 200,
         Created = 201,
         Accepted = 202,
         MovedPermanently = 301,

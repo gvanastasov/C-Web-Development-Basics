@@ -31,6 +31,10 @@ namespace SimpleHttpServer.Utilities
             byte[] responseHeader = Encoding.UTF8.GetBytes(response.ToString());
             stream.Write(responseHeader, 0, responseHeader.Length);
             stream.Write(response.Content, 0, response.Content.Length);
+
+            Console.WriteLine("-RESPONSE-----------------------------");
+            Console.WriteLine(response);
+            Console.WriteLine("------------------------------");
         }
     }
 }

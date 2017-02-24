@@ -13,22 +13,26 @@ namespace SimpleHttpServer
     {
         public static HttpResponse InternalServerError()
         {
-            //string content = File.ReadAllText("Resources/Pages/500.html");
+            
+            string content = File.ReadAllText("Resources/Pages/500.html");
             var response = new HttpResponse()
             {
                 StatusCode = ResponseStatusCode.InternalServerError,
+                ContentAsUTF8 = content
             };
-            response.Content = File.ReadAllBytes("./Pages/500.html");
 
             return response;
         }
 
         public static HttpResponse NotFound()
         {
-            var response = new HttpResponse();
-            response.Content = File.ReadAllBytes("./Pages/404.html");
+            string content = File.ReadAllText("Resources/Pages/404.html");
 
-            return response;
+            return new HttpResponse()
+            {
+                StatusCode = ResponseStatusCode.NotFound,
+                ContentAsUTF8 = content
+            };
         }
     }
 }
