@@ -25,7 +25,7 @@ namespace SimpleHttpServer.Enums
         Unauthorized = 401,
         Forbidden = 403,
         NotFound = 404,
-        MetodNotAllowed = 405,
+        MethodNotAllowed = 405,
         InternalServerError = 500
     }
 }
