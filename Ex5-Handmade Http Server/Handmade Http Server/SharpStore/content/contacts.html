@@ -58,24 +58,30 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <form action="" method="post" class="form-horizontal col-md-4 col-md-offset-4">
-                <label for="email">Your email</label>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-6">
+            <form method="POST" action="/contacts">
+                <label>Your Email</label>
                 <div class="input-group">
-                    <input class="form-control" type="email" id="email" placeholder="Enter your email...">
-                    <span class="glyphicon glyphicon-asterisk input-group-addon asterisk"></span>
+                    <input type="text" name="email" class="form-control" placeholder="Enter your email...">
+                    <span class="input-group-addon" id="basic-addon2">*</span>
                 </div>
-                <label for="subject">Subject</label>
+                <label>Subject</label>
                 <div class="input-group">
-                    <input class="form-control" type="text" id="subject" placeholder="Enter subject...">
-                    <span class="glyphicon glyphicon-asterisk input-group-addon asterisk"></span>
+                    <input type="text" name="subject" class="form-control" placeholder="Enter subject...">
+                    <span class="input-group-addon" id="basic-addon2">*</span>
                 </div>
-                <label for="msg">Message</label>
-                <textarea class="form-control" rows="10" id="comment"></textarea>
-                <button type="submit" class="btn btn-primary col-md-4" style="margin-bottom:100px">Send</button>
+                <div class="input-group">
+                    <label>Message</label>
+                    <textarea cols="50" class="form-control" name="message" placeholder="Enter your message..."></textarea>
+                </div>
+                <br />
+                <input type="submit" class="btn btn-primary" value="Send" />
             </form>
+            <br />
         </div>
+        <div class="col-sm-2"></div>
     </div>
 
 
