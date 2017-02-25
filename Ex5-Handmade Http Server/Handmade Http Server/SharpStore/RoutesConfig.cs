@@ -114,6 +114,25 @@ namespace SharpStore
                 },
                 new Route()
                 {
+                    Name = "Product Search",
+                    Method = RequestMethod.GET,
+                    UrlRegex = @"^/products\?knife=.*$",
+                    Callable = (request) =>
+                    {
+                        var knivesService = new Services.KnivesService();
+                        var knives = knivesService.GetKnives(request.Url);
+
+                        var knivesPage = new Pages.ProductsPage(knives);
+
+                        return new HttpResponse()
+                        {
+                            StatusCode = ResponseStatusCode.Ok,
+                            ContentAsUTF8 = knivesPage.ToString()
+                        };
+                    }
+                },
+                new Route()
+                {
                     Name = "Contacts Directory",
                     Method = RequestMethod.GET,
                     UrlRegex = "^/contacts$",
