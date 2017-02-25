@@ -76,6 +76,7 @@
     <Content Include="content\css\carousel.css" />
     <Content Include="content\home.html" />
     <Content Include="content\jquery\jquery-3.1.1.js" />
+    <Content Include="content\products.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="content\images\" />

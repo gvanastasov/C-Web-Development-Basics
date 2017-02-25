@@ -79,13 +79,27 @@ namespace SharpStore
                 {
                     Name = "About Directory",
                     Method = RequestMethod.GET,
-                    UrlRegex = "^/about",
+                    UrlRegex = "^/about$",
                     Callable = (request) =>
                     {
                         return new HttpResponse()
                         {
                             StatusCode = ResponseStatusCode.Ok,
                             ContentAsUTF8 = File.ReadAllText("../../content/about.html")
+                        };
+                    }
+                },
+                new Route()
+                {
+                    Name = "Products Directory",
+                    Method = RequestMethod.GET,
+                    UrlRegex = "^/products$",
+                    Callable = (request) =>
+                    {
+                        return new HttpResponse()
+                        {
+                            StatusCode = ResponseStatusCode.Ok,
+                            ContentAsUTF8 = File.ReadAllText("../../content/products.html")
                         };
                     }
                 }
