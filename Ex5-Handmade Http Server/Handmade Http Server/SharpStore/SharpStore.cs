@@ -102,6 +102,20 @@ namespace SharpStore
                             ContentAsUTF8 = File.ReadAllText("../../content/products.html")
                         };
                     }
+                },
+                new Route()
+                {
+                    Name = "Contacts Directory",
+                    Method = RequestMethod.GET,
+                    UrlRegex = "^/contacts$",
+                    Callable = (request) =>
+                    {
+                        return new HttpResponse()
+                        {
+                            StatusCode = ResponseStatusCode.Ok,
+                            ContentAsUTF8 = File.ReadAllText("../../content/contacts.html")
+                        };
+                    }
                 }
             };
 
