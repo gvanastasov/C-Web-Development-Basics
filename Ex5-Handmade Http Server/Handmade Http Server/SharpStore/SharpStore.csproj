@@ -52,6 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AboutPage.cs" />
+    <Compile Include="Pages\ContactsPage.cs" />
+    <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\Page.cs" />
     <Compile Include="Pages\ProductsPage.cs" />
     <Compile Include="RoutesConfig.cs" />
@@ -95,6 +98,8 @@
     <Content Include="content\bootstrap\js\npm.js" />
     <Content Include="content\contacts.html" />
     <Content Include="content\css\carousel.css" />
+    <Content Include="content\css\dark.css" />
+    <Content Include="content\css\light.css" />
     <Content Include="content\home.html" />
     <Content Include="content\jquery\jquery-3.1.1.js" />
     <Content Include="content\products.html" />
