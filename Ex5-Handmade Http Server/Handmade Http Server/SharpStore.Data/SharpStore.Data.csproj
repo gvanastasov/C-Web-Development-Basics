@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2AE5492C-ECFE-4CB0-95BB-FEA0FAAABB17}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{7030826C-2378-4C57-BF2A-18EDEFF24EC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SharpStore</RootNamespace>
-    <AssemblyName>SharpStore</AssemblyName>
+    <RootNamespace>SharpStore.Data</RootNamespace>
+    <AssemblyName>SharpStore.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -52,53 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Page.cs" />
-    <Compile Include="Pages\ProductsPage.cs" />
-    <Compile Include="RoutesConfig.cs" />
-    <Compile Include="Services\KnivesService.cs" />
-    <Compile Include="SharpStore.cs" />
+    <Compile Include="Knive.cs" />
+    <Compile Include="SharpStoreContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="content\bootstrap\css\bootstrap-theme.css.map" />
-    <None Include="content\bootstrap\css\bootstrap-theme.min.css.map" />
-    <None Include="content\bootstrap\css\bootstrap.css.map" />
-    <None Include="content\bootstrap\css\bootstrap.min.css.map" />
-    <None Include="content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <None Include="content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <None Include="content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <None Include="content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SharpStore.Data\SharpStore.Data.csproj">
-      <Project>{7030826c-2378-4c57-bf2a-18edeff24ec1}</Project>
-      <Name>SharpStore.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
-      <Project>{9e139539-c272-488a-bfcf-caddf458df9d}</Project>
-      <Name>SimpleHttpServer</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="content\about.html" />
-    <Content Include="content\bootstrap\css\bootstrap-theme.css" />
-    <Content Include="content\bootstrap\css\bootstrap-theme.min.css" />
-    <Content Include="content\bootstrap\css\bootstrap.css" />
-    <Content Include="content\bootstrap\css\bootstrap.min.css" />
-    <Content Include="content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="content\bootstrap\js\bootstrap.js" />
-    <Content Include="content\bootstrap\js\bootstrap.min.js" />
-    <Content Include="content\bootstrap\js\npm.js" />
-    <Content Include="content\contacts.html" />
-    <Content Include="content\css\carousel.css" />
-    <Content Include="content\home.html" />
-    <Content Include="content\jquery\jquery-3.1.1.js" />
-    <Content Include="content\products.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="content\images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
