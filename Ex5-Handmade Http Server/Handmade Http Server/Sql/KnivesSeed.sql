@@ -16,3 +16,15 @@ insert into Knives values
 ('Razor', 200.34, '../../content/images/knife.jpg'),
 ('Headcutter', 111.34, '../../content/images/knife.jpg'),
 ('Doombringer', 23443.34, '../../content/images/knife.jpg')
+
+insert into Knives values
+('Best Knife', 100.15, '../../content/images/knife.jpg')
+
+
+create table [Messages](
+	[Id] int primary key identity(1,1),
+	[Sender] varchar(100) not null,
+	[Subject] nvarchar(200) not null,
+	[Message] nvarchar(max)
+)
+
