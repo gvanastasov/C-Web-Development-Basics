@@ -9,13 +9,13 @@ Contains homeworks and other stuff, for the course title. Aims at learning web d
 - [X] Web Fundamentals Introduction
 - [X] HTML/CSS + Exercise 1
 - [X] HTTP Protocol + Exercise 2
-- [ ] State Management
-- [ ] Workshop: Web + Entity Framework
-- [ ] State Management + Exercise 3
-- [ ] Web + Entity Exercise 4
-- [ ] Web + Entity Exercise 5
-- [ ] Hand-made Web Server
-- [ ] Hand-made Web Server + Exercise 6
+- [x] State Management
+- [x] Workshop: Web + Entity Framework
+- [x] State Management + Exercise 3
+- [x] Web + Entity Exercise 4
+- [x] Web + Entity Exercise 5
+- [x] Hand-made Web Server
+- [x] Hand-made Web Server + Exercise 6
 - [ ] Hand-made Web Server + Exercise 7
 - [ ] Hand-made Web Server + Exercise 8
 - [ ] Introduction to MVC
