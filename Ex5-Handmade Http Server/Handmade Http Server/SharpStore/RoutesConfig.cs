@@ -223,6 +223,26 @@ namespace SharpStore
                             ContentAsUTF8 = page.ToString()
                         };
                     }
+                },
+                new Route()
+                {
+                    Name = "Images",
+                    Method = RequestMethod.GET,
+                    UrlRegex = @"^/images/.+\.jpg",
+                    Callable = (request) =>
+                    {
+                        var file = request.Url.Substring(request.Url.LastIndexOf('/') + 1);
+
+                        var response = new HttpResponse()
+                        {
+                            StatusCode = ResponseStatusCode.Ok,
+                            Content = File.ReadAllBytes($"../../content/images/{file}")
+                        };
+                        response.Header.ContentType = "image/jpeg";
+                        response.Header.ContentLength = response.Content.Length.ToString();
+
+                        return response;
+                    }
                 }
 
             };
