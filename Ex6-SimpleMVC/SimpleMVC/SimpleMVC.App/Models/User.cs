@@ -14,8 +14,8 @@ namespace SimpleMVC.App.Models
         }
 
         public int Id { get; set; }
-        public string Username { get; private set; }
-        public string Passsword { get; private set; }
+        public string Username { get; set; }
+        public string Passsword { get; set; }
         IEnumerable<Note> Notes { get; set; }
     }
 }

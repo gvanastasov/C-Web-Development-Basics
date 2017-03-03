@@ -18,6 +18,12 @@ namespace SimpleMVC.App.MVC.Routers
     /// </summary>
     public class ControllerRouter : IHandleable
     {
+        public ControllerRouter()
+        {
+            this.getParams = new Dictionary<string, string>();
+            this.postParams = new Dictionary<string, string>();
+        }
+
         private IDictionary<string, string> getParams;
         private IDictionary<string, string> postParams;
         private string requestMethod;
@@ -46,6 +52,10 @@ namespace SimpleMVC.App.MVC.Routers
                 StatusCode = ResponseStatusCode.Ok,
                 ContentAsUTF8 = content
             };
+
+            this.postParams = new Dictionary<string, string>();
+            this.getParams = new Dictionary<string, string>();
+
             return response;
         }
 
