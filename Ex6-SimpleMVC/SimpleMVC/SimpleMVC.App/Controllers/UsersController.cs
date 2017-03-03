@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using SimpleMVC.App.Models;
 using SimpleMVC.App.Data;
+using SimpleMVC.App.ViewModels;
+using SimpleMVC.App.MVC.Interfaces.Generic;
 
 namespace SimpleMVC.App.Controllers
 {
@@ -36,6 +38,23 @@ namespace SimpleMVC.App.Controllers
             }
 
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult<AllUsernamesViewModel> All()
+        {
+            List<string> usernames = null;
+            using (var ctx = new NotesAppContext())
+            {
+                usernames = ctx.Users.Select(u => u.Username).ToList();
+            }
+
+            var viewModel = new AllUsernamesViewModel()
+            {
+                Usernames = usernames
+            };
+
+            return View(viewModel);
         }
     }
 }

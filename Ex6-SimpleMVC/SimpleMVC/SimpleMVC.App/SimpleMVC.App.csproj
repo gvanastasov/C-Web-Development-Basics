@@ -78,7 +78,9 @@
     <Compile Include="MVC\ViewEngine\Generic\ActionResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouteTable.cs" />
+    <Compile Include="ViewModels\AllUsernamesViewModel.cs" />
     <Compile Include="Views\Home\Index.cs" />
+    <Compile Include="Views\Users\All.cs" />
     <Compile Include="Views\Users\Register.cs" />
   </ItemGroup>
   <ItemGroup>
