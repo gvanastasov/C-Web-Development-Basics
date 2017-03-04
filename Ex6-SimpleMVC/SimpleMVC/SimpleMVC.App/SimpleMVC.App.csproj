@@ -61,6 +61,11 @@
     <Compile Include="Controllers\NotesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Data\NotesAppContext.cs" />
+    <Compile Include="Migrations\201703032337248_InitialCreate.cs" />
+    <Compile Include="Migrations\201703032337248_InitialCreate.Designer.cs">
+      <DependentUpon>201703032337248_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Note.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="MVC\Attributes\Methods\HttpGetAttribute.cs" />
@@ -91,7 +96,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703032337248_InitialCreate.resx">
+      <DependentUpon>201703032337248_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
       <Project>{9e139539-c272-488a-bfcf-caddf458df9d}</Project>
