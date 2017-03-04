@@ -25,6 +25,7 @@ namespace SimpleMVC.App.Controllers
             using (var ctx = new NotesAppContext())
             {
                 var user = ctx.Users.FirstOrDefault(u => u.Id == id);
+
                 if(user != null)
                 {
                     var note = new Note()
