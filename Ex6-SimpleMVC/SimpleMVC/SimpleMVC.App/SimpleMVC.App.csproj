@@ -80,6 +80,7 @@
     <Compile Include="MVC\MvcContext.cs" />
     <Compile Include="MVC\MvcEngine.cs" />
     <Compile Include="MVC\Routers\ControllerRouter.cs" />
+    <Compile Include="MVC\Security\SignInManager.cs" />
     <Compile Include="MVC\ViewEngine\ActionResult.cs" />
     <Compile Include="MVC\ViewEngine\Generic\ActionResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

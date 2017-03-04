@@ -12,11 +12,20 @@ using SimpleMVC.App.Data;
 using SimpleMVC.App.ViewModels;
 using SimpleMVC.App.MVC.Interfaces.Generic;
 using SimpleHttpServer.Models;
+using SimpleMVC.App.MVC.Security;
 
 namespace SimpleMVC.App.Controllers
 {
     public class UsersController : Controller
     {
+
+        private SignInManager signInManager;
+
+        public UsersController()
+        {
+            signInManager = new SignInManager(new NotesAppContext());
+        }
+
         [HttpGet]
         public IActionResult Register()
         {
@@ -42,8 +51,14 @@ namespace SimpleMVC.App.Controllers
         }
 
         [HttpGet]
-        public IActionResult<AllUsernamesViewModel> All()
+        public IActionResult<AllUsernamesViewModel> All(HttpSession session)
         {
+
+            if(signInManager.IsAuthenticated(session) == false)
+            {
+
+            }
+
             var viewModel = new AllUsernamesViewModel();
 
             using (var ctx = new NotesAppContext())
