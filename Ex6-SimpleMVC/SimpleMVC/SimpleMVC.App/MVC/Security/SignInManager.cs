@@ -23,5 +23,16 @@ namespace SimpleMVC.App.MVC.Security
                 ? false
                 : dbContext.Logins.Any(l => l.SessionId == session.Id);
         }
+
+        public void Logout(HttpSession session)
+        {
+            var activeSession = dbContext.Logins.FirstOrDefault(l => l.SessionId == session.Id && l.IsActive == true);
+
+            if(activeSession != null)
+            {
+                activeSession.IsActive = false;
+                this.dbContext.SaveChanges();
+            }
+        }
     }
 }

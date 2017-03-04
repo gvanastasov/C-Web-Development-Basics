@@ -107,7 +107,7 @@ namespace SimpleMVC.App.Controllers
 
 
         [HttpPost]
-        public IActionResult Login(LoginUserBindingModel model, HttpSession session)
+        public IActionResult Login(LoginUserBindingModel model, HttpSession session, HttpResponse response)
         {
             string username = model.Username;
             string password = model.Password;
@@ -129,12 +129,20 @@ namespace SimpleMVC.App.Controllers
                     });
                     ctx.SaveChanges();
 
-                    //Redirect(response, "/home/index");
-                    //return null;
+                    Redirect(response, "/home/index");
+                    return null;
                 }
             }
 
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Logout(HttpSession session, HttpResponse response)
+        {
+            signInManager.Logout(session);
+
+            return View("Home", "Index");
         }
     }
 }
