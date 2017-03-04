@@ -19,11 +19,14 @@ namespace SimpleMVC.App.Views.Users
         {
             StringBuilder sb = new StringBuilder();
 
+            sb.AppendLine("<a href=\"/home/index\">Back to Home</a>");
+
+
             sb.AppendLine("<h3>All users</h3>");
             sb.AppendLine("<ul>");
-            foreach (var username in Model.Usernames)
+            foreach (var username in Model.Users)
             {
-                sb.AppendLine($"<li>{username}</li>");
+                sb.AppendLine($"<li><a href=\"/users/profile?id={username.Key}\">{username.Value}</a></li>");
             }
             sb.AppendLine("</ul>");
 

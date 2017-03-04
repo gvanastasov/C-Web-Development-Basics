@@ -43,16 +43,30 @@ namespace SimpleMVC.App.Controllers
         [HttpGet]
         public IActionResult<AllUsernamesViewModel> All()
         {
-            List<string> usernames = null;
+            var viewModel = new AllUsernamesViewModel();
+
             using (var ctx = new NotesAppContext())
             {
-                usernames = ctx.Users.Select(u => u.Username).ToList();
+                foreach (var user in ctx.Users)
+                {
+                    viewModel.Users.Add(user.Id, user.Username);
+                }
             }
 
-            var viewModel = new AllUsernamesViewModel()
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public IActionResult<UserProfileViewModel> Profile(int id)
+        {
+            var viewModel = new UserProfileViewModel();
+
+            using (var ctx = new NotesAppContext())
             {
-                Usernames = usernames
-            };
+                viewModel.UserId = id;
+                viewModel.Username = ctx.Users.FirstOrDefault(u => u.Id == id).Username;
+                viewModel.Notes = ctx.Notes.Where(n => n.Owner.Id == id).ToList();
+            }
 
             return View(viewModel);
         }

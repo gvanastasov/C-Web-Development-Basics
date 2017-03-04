@@ -74,7 +74,7 @@ namespace SimpleMVC.App.MVC.Routers
 
             // retrieve GET params
             var queryTokens = query.Split('&');
-            if(queryTokens.Length > 1)
+            if(queryTokens.Length > 0)
             {
                 foreach (var token in queryTokens)
                 {
@@ -93,7 +93,7 @@ namespace SimpleMVC.App.MVC.Routers
             if(string.IsNullOrEmpty(request.Content) == false)
             {
                 var contentTokens = request.Content.Split('&');
-                if(contentTokens.Length > 1)
+                if(contentTokens.Length > 0)
                 {
                     foreach (var token in contentTokens)
                     {

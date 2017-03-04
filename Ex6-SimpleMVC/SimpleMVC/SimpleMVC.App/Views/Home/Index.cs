@@ -11,7 +11,10 @@ namespace SimpleMVC.App.Views.Home
     {
         public string Render()
         {
-            return "<h3>Hello MVC!</h3>";
+            StringBuilder sb = new StringBuilder("<h2>Notes App</h2>");
+            sb.AppendLine("<a href=\"/users/all\">All users</a> <a href=\"/users/register\">Register Users</a>");
+
+            return sb.ToString();
         }
     }
 }

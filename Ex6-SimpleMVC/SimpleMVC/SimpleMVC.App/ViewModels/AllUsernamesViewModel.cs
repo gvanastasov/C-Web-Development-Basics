@@ -8,6 +8,10 @@ namespace SimpleMVC.App.ViewModels
 {
     public class AllUsernamesViewModel
     {
-        public IList<string> Usernames { get; set; }
+        public AllUsernamesViewModel()
+        {
+            Users = new Dictionary<int, string>();
+        }
+        public IDictionary<int,string> Users { get; set; }
     }
 }
