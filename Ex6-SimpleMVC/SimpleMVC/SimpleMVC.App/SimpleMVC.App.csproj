@@ -56,16 +56,15 @@
   <ItemGroup>
     <Compile Include="AppStart.cs" />
     <Compile Include="BindingModels\AddNoteBindingModel.cs" />
+    <Compile Include="BindingModels\LoginUserBindingModel.cs" />
     <Compile Include="BindingModels\RegisterUserBindingModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NotesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
-    <Compile Include="Data\NotesAppContext.cs" />
-    <Compile Include="Migrations\201703032337248_InitialCreate.cs" />
-    <Compile Include="Migrations\201703032337248_InitialCreate.Designer.cs">
-      <DependentUpon>201703032337248_InitialCreate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MVC\Interfaces\Security\IDbIdentityContext.cs" />
+    <Compile Include="Data\NotesAppContext.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Note.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="MVC\Attributes\Methods\HttpGetAttribute.cs" />
@@ -91,17 +90,13 @@
     <Compile Include="Views\Home\Index.cs" />
     <Compile Include="Views\Users\All.cs" />
     <Compile Include="Views\Users\Greet.cs" />
+    <Compile Include="Views\Users\Login.cs" />
     <Compile Include="Views\Users\Profile.cs" />
     <Compile Include="Views\Users\Register.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703032337248_InitialCreate.resx">
-      <DependentUpon>201703032337248_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">

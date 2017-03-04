@@ -82,5 +82,43 @@ namespace SimpleMVC.App.Controllers
 
             return View(viewModel);
         }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Login(LoginUserBindingModel model, HttpSession session)
+        {
+            string username = model.Username;
+            string password = model.Password;
+            string sessionId = session.Id;
+
+            using (var ctx = new NotesAppContext())
+            {
+                var user = ctx.Users.FirstOrDefault(
+                    u => u.Username == model.Username && 
+                    u.Passsword == model.Password);
+
+                if (user != null)
+                {
+                    ctx.Logins.Add(new Login()
+                    {
+                        SessionId = session.Id,
+                        User = user,
+                        IsActive = true
+                    });
+                    ctx.SaveChanges();
+
+                    //Redirect(response, "/home/index");
+                    //return null;
+                }
+            }
+
+            return View();
+        }
     }
 }

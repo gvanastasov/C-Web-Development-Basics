@@ -9,7 +9,7 @@ namespace SimpleMVC.App.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "SimpleMVC.App.Data.NotesAppContext";
         }
 
