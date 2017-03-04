@@ -18,10 +18,15 @@ namespace SimpleMVC.App.MVC.Routers
     /// </summary>
     public class ControllerRouter : IHandleable
     {
+        private HttpRequest request;
+        private HttpResponse response;
+
         public ControllerRouter()
         {
             this.getParams = new Dictionary<string, string>();
             this.postParams = new Dictionary<string, string>();
+            this.request = new HttpRequest();
+            this.response = new HttpResponse();
         }
 
         private IDictionary<string, string> getParams;
@@ -40,18 +45,21 @@ namespace SimpleMVC.App.MVC.Routers
         /// <returns></returns>
         public HttpResponse Handle(HttpRequest request)
         {
-            this.ParseInput(request);
+            this.request = request;
+            this.response = new HttpResponse();
+
+            this.ParseInput();
 
             IInvocable actionResult = (IInvocable)this
                 .GetMethod(requestMethod)
                 .Invoke(this.GetController(controllerName), methodParams);
 
-            string content = actionResult.Invoke();
-            var response = new HttpResponse()
+
+            if(string.IsNullOrEmpty(response.Header.Location))
             {
-                StatusCode = ResponseStatusCode.Ok,
-                ContentAsUTF8 = content
-            };
+                response.StatusCode = ResponseStatusCode.Ok;
+                response.ContentAsUTF8 = actionResult.Invoke();
+            }
 
             this.postParams = new Dictionary<string, string>();
             this.getParams = new Dictionary<string, string>();
@@ -59,9 +67,9 @@ namespace SimpleMVC.App.MVC.Routers
             return response;
         }
 
-        private void ParseInput(HttpRequest request)
+        private void ParseInput()
         {
-            string uri = WebUtility.UrlDecode(request.Url);
+            string uri = WebUtility.UrlDecode(this.request.Url);
 
             var uriTokens = uri.Split('?');
             string route = uriTokens[0];
@@ -90,9 +98,9 @@ namespace SimpleMVC.App.MVC.Routers
             }
 
             // retrieve POST params
-            if(string.IsNullOrEmpty(request.Content) == false)
+            if(string.IsNullOrEmpty(this.request.Content) == false)
             {
-                var contentTokens = request.Content.Split('&');
+                var contentTokens = this.request.Content.Split('&');
                 if(contentTokens.Length > 0)
                 {
                     foreach (var token in contentTokens)
@@ -110,7 +118,7 @@ namespace SimpleMVC.App.MVC.Routers
             }
 
             // retrieve REQUEST_METHOD type
-            this.requestMethod = request.Method.ToString();
+            this.requestMethod = this.request.Method.ToString();
 
             // retrieve CONTROLLER and ACTION names
             var routeTokens = route.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
@@ -146,12 +154,17 @@ namespace SimpleMVC.App.MVC.Routers
                 }
                 else if(param.ParameterType == typeof(HttpRequest))
                 {
-                    this.methodParams[index] = request;
+                    this.methodParams[index] = this.request;
                     index++;
                 }
                 else if(param.ParameterType == typeof(HttpSession))
                 {
-                    this.methodParams[index] = request.Session;
+                    this.methodParams[index] = this.request.Session;
+                    index++;
+                }
+                else if(param.ParameterType == typeof(HttpResponse))
+                {
+                    this.methodParams[index] = this.response;
                     index++;
                 }
                 else

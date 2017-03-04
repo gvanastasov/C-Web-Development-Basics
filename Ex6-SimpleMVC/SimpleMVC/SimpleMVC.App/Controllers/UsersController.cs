@@ -51,12 +51,13 @@ namespace SimpleMVC.App.Controllers
         }
 
         [HttpGet]
-        public IActionResult<AllUsernamesViewModel> All(HttpSession session)
+        public IActionResult<AllUsernamesViewModel> All(HttpSession session, HttpResponse response)
         {
 
             if(signInManager.IsAuthenticated(session) == false)
             {
-
+                Redirect(response, "/users/login");
+                return null;
             }
 
             var viewModel = new AllUsernamesViewModel();
