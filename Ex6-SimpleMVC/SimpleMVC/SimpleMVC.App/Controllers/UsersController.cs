@@ -11,6 +11,7 @@ using SimpleMVC.App.Models;
 using SimpleMVC.App.Data;
 using SimpleMVC.App.ViewModels;
 using SimpleMVC.App.MVC.Interfaces.Generic;
+using SimpleHttpServer.Models;
 
 namespace SimpleMVC.App.Controllers
 {
@@ -67,6 +68,17 @@ namespace SimpleMVC.App.Controllers
                 viewModel.Username = ctx.Users.FirstOrDefault(u => u.Id == id).Username;
                 viewModel.Notes = ctx.Notes.Where(n => n.Owner.Id == id).ToList();
             }
+
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public IActionResult<GreetViewModel> Greet(HttpSession session)
+        {
+            var viewModel = new GreetViewModel()
+            {
+                SessionId = session.Id
+            };
 
             return View(viewModel);
         }

@@ -17,9 +17,12 @@ namespace SimpleHttpServer
         private HttpRequest Request;
         private HttpResponse Response;
 
-        public HttpProcessor(IEnumerable<Route> routes)
+        private IDictionary<string, HttpSession> sessions;
+
+        public HttpProcessor(IEnumerable<Route> routes, IDictionary<string, HttpSession> sessions)
         {
             this.Routes = new List<Route>(routes);
+            this.sessions = sessions;
         }
 
         public void HandleClient(TcpClient tcpClient)
@@ -28,6 +31,7 @@ namespace SimpleHttpServer
             {
                 Request = GetRequest(stream);
                 Response = RouteRequest();
+
                 Console.WriteLine("-RESPONSE-------------");
                 Console.WriteLine(Response.Header);
                 //Console.WriteLine(Encoding.UTF8.GetString(Response.Content));
@@ -114,9 +118,6 @@ namespace SimpleHttpServer
                 content = Encoding.ASCII.GetString(bytes);
             }
 
-
-
-
             var request = new HttpRequest()
             {
                 Method = method,
@@ -124,6 +125,18 @@ namespace SimpleHttpServer
                 Header = header,
                 Content = content
             };
+
+            if(request.Header.Cookies.Contains("sessionId"))
+            {
+                var sessionId = request.Header.Cookies["sessionId"].Value;
+                request.Session = new HttpSession(sessionId);
+
+                if(this.sessions.ContainsKey(sessionId) == false)
+                {
+                    this.sessions.Add(sessionId, request.Session);
+                }
+            }
+
             Console.WriteLine("-REQUEST-----------------------------");
             Console.WriteLine(request);
             Console.WriteLine("------------------------------");
@@ -150,7 +163,21 @@ namespace SimpleHttpServer
             // trigger the route handler...
             try
             {
-                return route.Callable(Request);
+                HttpResponse response;
+                if(Request.Header.Cookies.Contains("sessionId") == false || this.Request.Session == null)
+                {
+                    var session = SessionCreator.Create();
+                    var sessionCookie = new Cookie("sessionId", session.Id + "; HttpOnly; path=/");
+                    this.Request.Session = session;
+                    response = route.Callable(this.Request);
+                    response.Header.AddCookie(sessionCookie);
+                }
+                else
+                {
+                    response = route.Callable(this.Request);
+                }
+
+                return response;
             }
             catch (Exception ex)
             {
